@@ -39,7 +39,7 @@ let movieObj = {
 let {movie, actor, ...fields} = movieObj;
 
 const funcObj = ({movie, actor}) => {
-    if (movie === undefined || actor === undefined){
+    if (movie === undefined & actor === undefined){
         movie = 1;
         actor = 2;
     } else if (movie === undefined) {
