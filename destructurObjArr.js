@@ -36,9 +36,7 @@ let movieObj = {
     genre: "romance",
 }
 
-let {movie, actor, ...fields} = movieObj;
-
-const funcObj = ({movie, actor}) => {
+const funcObj = ({movie, actor, ...fields}) => {
     if (movie === undefined & actor === undefined){
         movie = 1;
         actor = 2;
@@ -48,9 +46,10 @@ const funcObj = ({movie, actor}) => {
         actor = 2;
     }
     console.log(movie + "\n" + actor + "\n");
+    for (const key in fields) {
+    console.log(key + ": " + fields[key]);
+    }
 }
 funcObj(movieObj);
 
-for (const key in fields) {
-    console.log(key + ": " + fields[key]);
-}
+
